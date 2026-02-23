@@ -482,10 +482,10 @@
 
     <section class="contact-section" id="contact">
         <h2>Start a Project</h2>
-        <form class="contact-form" onsubmit="event.preventDefault()">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea rows="4" placeholder="How can I help?"></textarea>
+        <form class="contact-form" action="https://formspree.io/f/xykdbdlb" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="4" placeholder="How can I help?" required></textarea>
             <button type="submit" class="submit-btn">Send Message</button>
         </form>
     </section>
@@ -526,9 +526,11 @@
 
         function closeLightbox() {
             const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
             lightbox.classList.remove('active');
             setTimeout(() => {
                 lightbox.style.display = 'none';
+                lightboxImg.src = ""; // Clear src to stop flash of old image
             }, 300);
         }
     </script>
