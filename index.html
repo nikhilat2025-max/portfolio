@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YEANIKHIL | Graphic Designer</title>
+
+    <link rel="icon" type="image/png" href="logo.png">
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -14,7 +17,6 @@
             --card-bg: rgba(255, 255, 255, 0.03);
         }
 
-        /* Smooth Scroll behavior */
         html {
             scroll-behavior: smooth;
         }
@@ -39,13 +41,13 @@
             position: fixed;
             top: 0;
             width: 100%;
-            padding: 25px 5%;
+            padding: 20px 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             z-index: 100;
-            background: rgba(5, 5, 5, 0.5);
-            backdrop-filter: blur(10px);
+            background: rgba(5, 5, 5, 0.8);
+            backdrop-filter: blur(15px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
 
@@ -135,11 +137,11 @@
         }
 
         .hero h1 {
-            font-size: clamp(4rem, 15vw, 12rem);
+            font-size: clamp(3.5rem, 15vw, 12rem);
             font-weight: 900;
             text-transform: uppercase;
-            letter-spacing: -6px;
-            line-height: 0.8;
+            letter-spacing: -4px;
+            line-height: 0.9;
             margin-bottom: 20px;
             background: linear-gradient(to bottom, #fff 60%, #444);
             -webkit-background-clip: text;
@@ -147,9 +149,9 @@
         }
 
         .hero p {
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             color: #888;
-            letter-spacing: 5px;
+            letter-spacing: 3px;
             text-transform: uppercase;
         }
 
@@ -159,7 +161,7 @@
             overflow: hidden;
             background: rgba(255, 255, 255, 0.02);
             backdrop-filter: blur(5px);
-            padding: 25px 0;
+            padding: 20px 0;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
@@ -171,9 +173,9 @@
         }
 
         .ticker span {
-            font-size: 2.5rem;
+            font-size: 2rem;
             font-weight: 900;
-            padding: 0 50px;
+            padding: 0 40px;
             color: transparent;
             -webkit-text-stroke: 1px rgba(255,255,255,0.2);
             text-transform: uppercase;
@@ -186,24 +188,24 @@
 
         /* --- Portfolio Section --- */
         .portfolio-section {
-            padding: 120px 5% 100px;
+            padding: 100px 5%;
             max-width: 1400px;
             margin: 0 auto;
         }
 
         .section-header {
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 40px;
         }
 
-        .section-header h2 { font-size: clamp(2.5rem, 6vw, 5rem); font-weight: 900; }
+        .section-header h2 { font-size: clamp(2rem, 6vw, 5rem); font-weight: 900; }
         .section-header span { color: var(--accent-purple); }
 
         .filter-nav {
             display: flex;
             justify-content: center;
             gap: 10px;
-            margin-bottom: 60px;
+            margin-bottom: 40px;
             flex-wrap: wrap;
         }
 
@@ -211,10 +213,11 @@
             background: transparent;
             border: 1px solid rgba(255,255,255,0.1);
             color: #666;
-            padding: 10px 25px;
+            padding: 8px 20px;
             border-radius: 50px;
             cursor: pointer;
             font-weight: 700;
+            font-size: 0.75rem;
             transition: 0.3s;
         }
 
@@ -226,15 +229,15 @@
 
         .work-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
         }
 
         .work-card {
             background: var(--card-bg);
             border: 1px solid rgba(255,255,255,0.05);
-            border-radius: 24px;
-            height: 500px;
+            border-radius: 20px;
+            height: 400px;
             position: relative;
             overflow: hidden;
             cursor: pointer;
@@ -261,7 +264,7 @@
 
         /* --- Social & Email Section --- */
         .social-connect {
-            padding: 80px 5%;
+            padding: 60px 5%;
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 20px;
@@ -272,8 +275,8 @@
         .connect-card {
             background: rgba(255,255,255,0.03);
             border: 1px solid rgba(255,255,255,0.08);
-            padding: 60px 40px;
-            border-radius: 30px;
+            padding: 40px 20px;
+            border-radius: 24px;
             text-align: center;
             text-decoration: none;
             transition: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
@@ -285,34 +288,31 @@
 
         .connect-card:hover {
             background: rgba(255,255,255,0.07);
-            transform: translateY(-10px);
+            transform: translateY(-5px);
             border-color: var(--accent-purple);
         }
 
         .connect-card h3 {
-            font-size: 0.8rem;
+            font-size: 0.7rem;
             text-transform: uppercase;
-            letter-spacing: 3px;
+            letter-spacing: 2px;
             color: var(--accent-purple);
             font-weight: 700;
         }
 
         .connect-card p {
-            font-size: 1.8rem;
+            font-size: 1.2rem;
             font-weight: 900;
             color: #fff;
-            letter-spacing: -1px;
         }
 
-        /* --- LIGHTBOX STYLES --- */
+        /* --- LIGHTBOX --- */
         .lightbox {
             display: none;
             position: fixed;
             z-index: 999;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
             background-color: rgba(0, 0, 0, 0.95);
             backdrop-filter: blur(15px);
             justify-content: center;
@@ -322,9 +322,8 @@
 
         .lightbox img {
             max-width: 90%;
-            max-height: 85%;
+            max-height: 80%;
             border-radius: 10px;
-            box-shadow: 0 0 50px rgba(0,0,0,0.5);
             transform: scale(0.9);
             transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
@@ -333,43 +332,85 @@
 
         .close-lightbox {
             position: absolute;
-            top: 30px;
-            right: 40px;
-            color: white;
-            font-size: 40px;
-            font-weight: 200;
-            cursor: pointer;
+            top: 20px; right: 30px;
+            color: white; font-size: 40px; cursor: pointer;
         }
 
-        /* --- Contact Form --- */
-        .contact-section { padding: 100px 5%; text-align: center; }
-        .contact-form { max-width: 600px; margin: 50px auto 0; display: flex; flex-direction: column; gap: 20px; }
+        /* --- Contact --- */
+        .contact-section { padding: 80px 5%; text-align: center; }
+        .contact-form { max-width: 500px; margin: 40px auto 0; display: flex; flex-direction: column; gap: 15px; }
         .contact-form input, .contact-form textarea {
             background: rgba(255,255,255,0.03);
             border: 1px solid rgba(255,255,255,0.1);
-            padding: 20px;
+            padding: 15px;
             color: #fff;
-            border-radius: 15px;
+            border-radius: 12px;
             outline: none;
             font-family: inherit;
         }
 
         .submit-btn {
-            background: #fff; color: #000; padding: 20px; border-radius: 15px;
+            background: #fff; color: #000; padding: 18px; border-radius: 12px;
             font-weight: 900; cursor: pointer; border: none; transition: 0.3s;
             text-transform: uppercase; letter-spacing: 2px;
         }
 
         .submit-btn:hover { background: var(--accent-purple); color: #fff; }
 
-        footer { padding: 50px; display: flex; justify-content: space-between; color: #444; font-weight: bold; border-top: 1px solid rgba(255,255,255,0.05); }
+        footer { padding: 40px 5%; display: flex; justify-content: space-between; color: #444; font-size: 0.8rem; border-top: 1px solid rgba(255,255,255,0.05); }
 
+        /* --- RESPONSIVE FIXES --- */
         @media (max-width: 768px) {
-            header nav { display: none; }
+            header {
+                padding: 15px 5%;
+                background: rgba(5, 5, 5, 0.95); /* More solid on mobile */
+            }
+
+            /* Prevent name and nav overlap by putting nav at bottom or refining the top */
+            header nav { 
+                position: fixed;
+                bottom: 25px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: rgba(20, 20, 20, 0.8);
+                backdrop-filter: blur(25px);
+                padding: 12px 25px;
+                border-radius: 100px;
+                border: 1px solid rgba(255, 255, 255, 0.15);
+                display: flex;
+                gap: 20px;
+                width: auto;
+                min-width: 280px;
+                justify-content: center;
+                box-shadow: 0 15px 40px rgba(0,0,0,0.8);
+                z-index: 1000;
+            }
+
+            header nav a {
+                font-size: 0.65rem;
+                color: #fff;
+                letter-spacing: 1px;
+            }
+
+            .logo {
+                font-size: 1rem;
+                margin: 0 auto; /* Center logo on mobile */
+            }
+
+            header div:last-child { display: none; } /* Hide year on mobile to save space */
+
+            .hero h1 { font-size: 4rem; letter-spacing: -2px; }
+            .hero p { font-size: 0.7rem; letter-spacing: 2px; }
+
             .social-connect { grid-template-columns: 1fr; }
             .work-grid { grid-template-columns: 1fr; }
-            footer { flex-direction: column; gap: 20px; text-align: center; }
-            .hero h1 { letter-spacing: -2px; }
+            
+            footer { 
+                flex-direction: column; 
+                gap: 15px; 
+                text-align: center; 
+                padding-bottom: 120px; /* Space for the bottom nav */
+            }
         }
     </style>
 </head>
@@ -530,7 +571,7 @@
             lightbox.classList.remove('active');
             setTimeout(() => {
                 lightbox.style.display = 'none';
-                lightboxImg.src = ""; // Clear src to stop flash of old image
+                lightboxImg.src = ""; 
             }, 300);
         }
     </script>
