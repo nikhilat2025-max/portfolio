@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YEANIKHIL | Graphic Designer</title>
 
-   <link rel="icon" type="image/png" href="./logo.png">
+    <link rel="icon" type="image/png" href="logo.png">
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
@@ -363,7 +363,7 @@
         @media (max-width: 768px) {
             header {
                 padding: 20px 0;
-                background: transparent; /* Remove background so logo is "naked" on the blobs */
+                background: transparent;
                 backdrop-filter: none;
                 border-bottom: none;
                 justify-content: center;
@@ -374,7 +374,7 @@
                 font-size: 1.1rem;
                 letter-spacing: 3px;
                 position: absolute;
-                top: 25px; /* Manually pin it to the top */
+                top: 25px;
             }
 
             header nav { 
@@ -403,7 +403,7 @@
             header div:last-child { display: none; } 
 
             .hero {
-                padding-top: 100px; /* Push hero content down so it doesn't hit the logo */
+                padding-top: 100px;
             }
 
             .hero h1 { font-size: 4.5rem; }
@@ -533,6 +533,7 @@
 
     <footer>
         <div>© 2026 YEANIKHIL</div>
+        <div>INSTAGRAM / BEHANCE / DRIBBBLE</div>
     </footer>
 
     <script>
@@ -567,7 +568,7 @@
         function closeLightbox() {
             const lightbox = document.getElementById('lightbox');
             const lightboxImg = document.getElementById('lightbox-img');
-                lightbox.classList.remove('active');
+            lightbox.classList.remove('active');
             setTimeout(() => {
                 lightbox.style.display = 'none';
                 lightboxImg.src = ""; 
