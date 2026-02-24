@@ -357,59 +357,59 @@
 
         .submit-btn:hover { background: var(--accent-purple); color: #fff; }
 
-        footer { padding: 40px 5%; display: flex; justify-content: space-between; color: #444; font-size: 0.8rem; border-top: 1px solid rgba(255,255,255,0.05); }
+        footer { padding: 40px 5%; display: flex; justify-content: space-between; color: #444; font-size: 0.8rem; border-top: 1px solid rgba(255, 255, 255, 0.05); }
 
         /* --- RESPONSIVE FIXES --- */
         @media (max-width: 768px) {
             header {
-                padding: 15px 5%;
-                background: rgba(5, 5, 5, 0.95); /* More solid on mobile */
+                padding: 20px 0;
+                background: transparent; /* Remove background so logo is "naked" on the blobs */
+                backdrop-filter: none;
+                border-bottom: none;
+                justify-content: center;
+                height: auto;
             }
 
-            /* Prevent name and nav overlap by putting nav at bottom or refining the top */
+            .logo {
+                font-size: 1.1rem;
+                letter-spacing: 3px;
+                position: absolute;
+                top: 25px; /* Manually pin it to the top */
+            }
+
             header nav { 
                 position: fixed;
-                bottom: 25px;
+                bottom: 30px;
                 left: 50%;
                 transform: translateX(-50%);
-                background: rgba(20, 20, 20, 0.8);
-                backdrop-filter: blur(25px);
-                padding: 12px 25px;
+                background: rgba(255, 255, 255, 0.05);
+                backdrop-filter: blur(20px);
+                padding: 15px 30px;
                 border-radius: 100px;
-                border: 1px solid rgba(255, 255, 255, 0.15);
+                border: 1px solid rgba(255, 255, 255, 0.1);
                 display: flex;
-                gap: 20px;
-                width: auto;
-                min-width: 280px;
+                gap: 25px;
+                width: 90%;
+                max-width: 320px;
                 justify-content: center;
-                box-shadow: 0 15px 40px rgba(0,0,0,0.8);
                 z-index: 1000;
             }
 
             header nav a {
-                font-size: 0.65rem;
+                font-size: 0.7rem;
                 color: #fff;
-                letter-spacing: 1px;
             }
 
-            .logo {
-                font-size: 1rem;
-                margin: 0 auto; /* Center logo on mobile */
+            header div:last-child { display: none; } 
+
+            .hero {
+                padding-top: 100px; /* Push hero content down so it doesn't hit the logo */
             }
 
-            header div:last-child { display: none; } /* Hide year on mobile to save space */
+            .hero h1 { font-size: 4.5rem; }
 
-            .hero h1 { font-size: 4rem; letter-spacing: -2px; }
-            .hero p { font-size: 0.7rem; letter-spacing: 2px; }
-
-            .social-connect { grid-template-columns: 1fr; }
-            .work-grid { grid-template-columns: 1fr; }
-            
             footer { 
-                flex-direction: column; 
-                gap: 15px; 
-                text-align: center; 
-                padding-bottom: 120px; /* Space for the bottom nav */
+                padding-bottom: 120px; 
             }
         }
     </style>
@@ -533,7 +533,6 @@
 
     <footer>
         <div>© 2026 YEANIKHIL</div>
-        <div>INSTAGRAM / BEHANCE / DRIBBBLE</div>
     </footer>
 
     <script>
@@ -568,7 +567,7 @@
         function closeLightbox() {
             const lightbox = document.getElementById('lightbox');
             const lightboxImg = document.getElementById('lightbox-img');
-            lightbox.classList.remove('active');
+                lightbox.classList.remove('active');
             setTimeout(() => {
                 lightbox.style.display = 'none';
                 lightboxImg.src = ""; 
